@@ -22,7 +22,7 @@ const CreatePost = () => {
     const submitHandler = async (event) => {
         event.preventDefault();
 
-        await axios.post(BASE_POST_URL, { title: title });
+        await axios.post(`${BASE_POST_URL}/posts`, { title: title });
 
         toast({
             title: "Post Created",
